@@ -60,7 +60,6 @@ public class MidiInputReceiver implements Receiver {
     }
     @Override
     public void send(MidiMessage msg, long timeStamp) {
-        System.out.println("midi received");
         int out = msg.getMessage()[1];
         try {
             output(out);
@@ -90,19 +89,15 @@ public class MidiInputReceiver implements Receiver {
                 }
             }else{
                 switch(in){
-                    case 48: robot.keyPress(KeyEvent.VK_ESCAPE); break;
-                    case 56: robot.keyPress(KeyEvent.VK_W); break;
-                    case 53: robot.keyPress(KeyEvent.VK_A); break;
-                    case 59: robot.keyPress(KeyEvent.VK_D); break;
-                    case 55: robot.keyPress(KeyEvent.VK_S); break;
-                    case 57: robot.keyPress(KeyEvent.VK_S); break;
-                    case 69: robot.keyPress(KeyEvent.VK_C); break;
-                    case 71: robot.keyPress(KeyEvent.VK_X); break;
-                    case 67: robot.keyPress(KeyEvent.VK_Y); break;
-                    case 50: robot.keyPress(KeyEvent.VK_I); break;
-                    case 72: robot.keyPress(KeyEvent.VK_O); break;
-                    case 68: robot.keyPress(KeyEvent.VK_P); break;
-                    case 70: robot.keyPress(KeyEvent.VK_L); break;
+                    case 75: robot.keyPress(KeyEvent.VK_ESCAPE); break;
+                    case 68: robot.keyPress(KeyEvent.VK_W); break;
+                    case 65: robot.keyPress(KeyEvent.VK_A); break;
+                    case 71: robot.keyPress(KeyEvent.VK_D); break;
+                    case 67: robot.keyPress(KeyEvent.VK_S); break;
+                    case 69: robot.keyPress(KeyEvent.VK_S); break;
+                    case 88: robot.keyPress(KeyEvent.VK_C); break;
+                    case 84: robot.keyPress(KeyEvent.VK_X); break;
+                    case 81: robot.keyPress(KeyEvent.VK_Z); break;
                 }
             }
         }else{
@@ -119,19 +114,15 @@ public class MidiInputReceiver implements Receiver {
                 }
             }else{
                 switch(in){
-                    case 48: robot.keyRelease(KeyEvent.VK_ESCAPE); break;
-                    case 56: robot.keyRelease(KeyEvent.VK_W); break;
-                    case 53: robot.keyRelease(KeyEvent.VK_A); break;
-                    case 59: robot.keyRelease(KeyEvent.VK_D); break;
-                    case 55: robot.keyRelease(KeyEvent.VK_S); break;
-                    case 57: robot.keyRelease(KeyEvent.VK_S); break;
-                    case 69: robot.keyRelease(KeyEvent.VK_C); break;
-                    case 71: robot.keyRelease(KeyEvent.VK_X); break;
-                    case 67: robot.keyRelease(KeyEvent.VK_Y); break;
-                    case 50: robot.keyRelease(KeyEvent.VK_I); break;
-                    case 72: robot.keyRelease(KeyEvent.VK_O); break;
-                    case 68: robot.keyRelease(KeyEvent.VK_P); break;
-                    case 70: robot.keyRelease(KeyEvent.VK_L); break;
+                    case 75: robot.keyRelease(KeyEvent.VK_ESCAPE); break;
+                    case 68: robot.keyRelease(KeyEvent.VK_W); break;
+                    case 65: robot.keyRelease(KeyEvent.VK_A); break;
+                    case 71: robot.keyRelease(KeyEvent.VK_D); break;
+                    case 67: robot.keyRelease(KeyEvent.VK_S); break;
+                    case 69: robot.keyRelease(KeyEvent.VK_S); break;
+                    case 88: robot.keyRelease(KeyEvent.VK_C); break;
+                    case 84: robot.keyRelease(KeyEvent.VK_X); break;
+                    case 81: robot.keyRelease(KeyEvent.VK_Z); break;
                 }
             }
         }
